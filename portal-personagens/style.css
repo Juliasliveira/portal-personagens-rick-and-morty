@@ -1,0 +1,29 @@
+:root{
+  --fundo:#1d1740; --painel:#2a2160; --papel:#f6f1dc; --tinta:#1d1740;
+  --portal:#97ce4c; --rosa:#ff6fa5; --texto:#f6f1dc;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',Arial,sans-serif;background:var(--fundo);color:var(--texto);line-height:1.5;min-height:100vh}
+.topo{text-align:center;padding:3rem 1rem 2rem;background:radial-gradient(circle at 50% 120%,var(--portal) 0,transparent 55%),var(--painel)}
+h1{font-family:'Bowlby One','Arial Black',sans-serif;font-size:clamp(2rem,6vw,3.6rem);color:var(--portal);text-shadow:4px 4px 0 var(--rosa);font-weight:400}
+.topo p{max-width:52ch;margin:.8rem auto 1.5rem}
+.controles{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+input,select{padding:.7rem 1rem;border:3px solid var(--tinta);border-radius:10px;font:inherit;background:var(--papel);color:var(--tinta);min-width:220px}
+:focus-visible{outline:3px solid var(--rosa);outline-offset:2px}
+main{max-width:1150px;margin:0 auto;padding:2rem 1rem}
+#mensagem{text-align:center;margin-bottom:1rem;min-height:1.5rem}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.4rem}
+.card{background:var(--papel);color:var(--tinta);border:4px solid var(--tinta);border-radius:16px;overflow:hidden;box-shadow:6px 6px 0 var(--portal);transition:transform .15s}
+.card:hover{transform:translate(-2px,-2px)}
+.card img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-bottom:4px solid var(--tinta)}
+.card-corpo{padding:1rem}
+.card h2{font-family:'Bowlby One','Arial Black',sans-serif;font-weight:400;font-size:1.15rem;margin-bottom:.5rem}
+.card p{font-size:.92rem}
+.selo{display:inline-block;padding:.15rem .7rem;border-radius:999px;font-weight:700;font-size:.8rem;border:2px solid var(--tinta);margin-bottom:.5rem}
+.selo.alive{background:var(--portal)} .selo.dead{background:var(--rosa)} .selo.unknown{background:#cfc9ae}
+.botao{display:block;margin:2rem auto 0;padding:.8rem 2rem;font:inherit;font-weight:700;background:var(--portal);color:var(--tinta);border:3px solid var(--tinta);border-radius:12px;cursor:pointer;box-shadow:4px 4px 0 var(--rosa)}
+.botao:hover{background:#b4e26b}
+.botao[hidden]{display:none}
+footer{text-align:center;padding:2rem 1rem;font-size:.85rem}
+footer a{color:var(--portal)}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}

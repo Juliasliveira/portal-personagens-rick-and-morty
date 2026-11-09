@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal de Personagens – Rick and Morty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Portal de Personagens</h1>
+    <p>Dados em tempo real da API de Rick and Morty. Busque, filtre e explore o multiverso.</p>
+    <div class="controles">
+      <input id="busca" type="search" placeholder="Buscar por nome (ex: Rick)" aria-label="Buscar personagem por nome">
+      <select id="filtro" aria-label="Filtrar por status">
+        <option value="">Todos os status</option>
+        <option value="alive">Vivo</option>
+        <option value="dead">Morto</option>
+        <option value="unknown">Desconhecido</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <p id="mensagem" role="status"></p>
+    <section id="cards" class="grade" aria-label="Lista de personagens"></section>
+    <button id="mais" class="botao" hidden>Carregar mais</button>
+  </main>
+
+  <footer>Projeto acadêmico · Dados: <a href="https://rickandmortyapi.com/" target="_blank" rel="noopener">rickandmortyapi.com</a></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
